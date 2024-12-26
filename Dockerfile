@@ -4,7 +4,7 @@ FROM openjdk:21-jdk-slim
 # Créer un répertoire de travail
 WORKDIR /app
 
-# Copier le fichier jar généré dans le conteneur Docker
+# Copier le fichier jar généré dans le conteneur Dockers
 COPY target/user-management.jar app.jar
 
 # Exposer le port sur lequel l'application sera disponible

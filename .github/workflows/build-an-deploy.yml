@@ -70,11 +70,11 @@ jobs:
 
 
       # Set up kubeconfig from secret
-      - name: Set up kubeconfig
-        run: |
-          echo "${{ secrets.KUBECONFIG_CONTENT }}" > $HOME/.kube/config
-          kubectl config use-context docker-desktop  # Set context to docker-desktop
-          kubectl config set-context --current --namespace=ensakh
+#      - name: Set up kubeconfig
+#        run: |
+#          echo "${{ secrets.KUBECONFIG_CONTENT }}" > $HOME/.kube/config
+#          kubectl config use-context docker-desktop  # Set context to docker-desktop
+#          kubectl config set-context --current --namespace=ensakh
 
       # Verify Kubernetes context
       - name: Verify Kubernetes context

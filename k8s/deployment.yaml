@@ -17,7 +17,7 @@ spec:
         - name: quality-gate-container
           image: mounivio/quality-gate:latest  # Utilisez votre image Docker
           ports:
-            - containerPort: 8080
+            - containerPort: 8090
 
 ---
 apiVersion: v1

@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: quality-gate-container
-          image: mounivio/quality-gate:latest  # Use your Docker image
+          image: mounivio/quality-gate:latest  # Utilisez votre image Docker
           ports:
             - containerPort: 8080
 
@@ -24,13 +24,11 @@ apiVersion: v1
 kind: Service
 metadata:
   name: quality-gate-service
-  namespace: ensakh
 spec:
   selector:
     app: quality-gate-app
   ports:
     - protocol: TCP
-      port: 8090       # The port exposed to the client
+      port: 8080       # The port exposed to the client
       targetPort: 8080 # The port inside the Pod/container
-      nodePort: 8090   # Fixed port exposed on localhost
-  type: NodePort
+  type: LoadBalancer  # Ou ClusterIP ou NodePort selon votre besoin

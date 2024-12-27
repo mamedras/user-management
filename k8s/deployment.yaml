@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: quality-gate-container
-          image: carikk/quality-gate:latest  # Utilisez votre image Docker
+          image: mounivio/quality-gate:latest  # Utilisez votre image Docker
           ports:
             - containerPort: 8090
 

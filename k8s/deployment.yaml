@@ -18,6 +18,7 @@ spec:
           image: mounivio/quality-gate:latest  # Utilisez votre image Docker
           ports:
             - containerPort: 8080
+              hostPort: 8090 # Bind to localhost:8090
 
 ---
 apiVersion: v1

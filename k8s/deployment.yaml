@@ -17,7 +17,7 @@ spec:
         - name: quality-gate-container
           image: mounivio/quality-gate:latest  # Utilisez votre image Docker
           ports:
-            - containerPort: 8090
+            - containerPort: 8080
 
 ---
 apiVersion: v1
@@ -29,6 +29,6 @@ spec:
     app: quality-gate-app
   ports:
     - protocol: TCP
-      port: 8080
-      targetPort: 8090
+      port: 8090       # The port exposed to the client
+      targetPort: 8080 # The port inside the Pod/container
   type: LoadBalancer  # Ou ClusterIP ou NodePort selon votre besoin

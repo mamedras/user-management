@@ -92,7 +92,7 @@ public class UserController {
     public String signupAction(@Valid @ModelAttribute("userForm") User user, BindingResult result, ModelMap model) {
         Role userRole = roleRepository.findByName("USER");
         List<Role> roles = Collections.singletonList(userRole);
-        log.info("Creating user");
+        //log.info("Creating user");
         model.addAttribute("userForm", user);
         model.addAttribute("roles", roles);
         model.addAttribute("signup", true);
